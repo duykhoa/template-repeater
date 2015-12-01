@@ -1,0 +1,21 @@
+{
+  "name": "template_repeater",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Duy Khoa <duykhoa12t@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~1.2.3"
+  }
+}
