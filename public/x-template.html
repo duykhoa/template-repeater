@@ -1,12 +1,23 @@
 <dom-module id="x-template">
   <template>
+    <x-template-template>
+      link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
     <style></style>
-    hi world
+
+    <iron-ajax></iron-ajax>
+    <template is="dom-repeat" items="[[data]]">
+    </template>
   </template>
 
   <script>
     Polymer({
       is: 'x-template',
+      properties: {
+        data: {
+          type: Object,
+        }
+      }
     })
   </script>
 </dom-module>
