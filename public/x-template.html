@@ -1,12 +1,16 @@
 <dom-module id="x-template">
+  <link rel="import" href="../iron-ajax/iron-ajax.html">
   <template>
-    <x-template-template>
-      <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
     <style></style>
 
-    <iron-ajax></iron-ajax>
-    <template is="dom-repeat" items="[[data]]">
+    <iron-ajax url="/data.json" last-response="{{data}}" auto></iron-ajax>
+
+    <template is="dom-repeat" items="{{data}}">
+      <tr>
+        <td>[[item.image]]</td>
+        <td>[[item.name]]</td>
+      </tr>
     </template>
   </template>
 
@@ -16,6 +20,7 @@
       properties: {
         data: {
           type: Object,
+          value: []
         }
       }
     })
