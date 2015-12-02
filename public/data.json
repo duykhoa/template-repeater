@@ -1,10 +1,35 @@
 [
   {
-    "name": "Khoa",
-    "image": "2"
+    "row1": {
+      "table_background": "#2196f3",
+      "table_color": "#f7fcff",
+      "row_title": "What is RLSA?"
+    },
+    "row2": {
+      "img": {
+        "src": "http://go.thinkwithgoogle.com/rs/googleads/images/toward-viewability-advertising-measurement-bn-600x150.jpg",
+        "alt": "Win every micro-moment with a better mobile strategy"
+      }
+    },
+    "row3": {
+      "text": "It stands for Remarketing List on Search Ads: showing ads to people who have previously visited your site when they search for your targeted keywords on Google."
+    }
   },
+
   {
-    "name": "Khoa",
-    "image": "1"
+    "row1": {
+      "table_background": "#f44336",
+      "table_color": "#f7fcff",
+      "row_title": "How can this help me?"
+    },
+    "row2": {
+      "img": {
+        "src": "http://go.thinkwithgoogle.com/rs/googleads/images/TWG_StaffingForMeasurement_600x150.jpg",
+        "alt": "Win every micro-moment with a better mobile strategy"
+      }
+    },
+    "row3": {
+      "text": "It helps segment your customer base on Google search in 2 types: those who have never been to your website and those who have. The latter is supposed to be the more potential group of customers and where your focus should be!"
+    }
   }
 ]

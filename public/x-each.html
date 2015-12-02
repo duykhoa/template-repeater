@@ -15,14 +15,15 @@
     <tr>
       <td style="vertical-align:middle" align="center">
         <table
-          style="width:100%!important;background:#2196f3;color:#f7fcff;font-family:Roboto,Helvetica,sans-serif,Arial;font-size:20px"
+          style$="[[tableStyle]]"
           border="0" cellspacing="0" cellpadding="15" width="100%"
         >
           <tbody>
             <tr>
-              <td style="vertical-align:top" width="100%" align="center" valign="top">
-                What is RLSA?
-              </td>
+              <td
+                style="vertical-align:top"
+                width="100%" align="center" valign="top"
+              >[[item.row1.row_title]]</td>
             </tr>
           </tbody>
         </table>
@@ -33,9 +34,9 @@
       <td style="vertical-align:top" width="100%" align="center" valign="top" bgcolor="#FFFFFF">
         <img
           style="display:block"
-          src="http://go.thinkwithgoogle.com/rs/googleads/images/toward-viewability-advertising-measurement-bn-600x150.jpg"
+          src="[[item.row2.img.src]]"
           border="0"
-          alt="Win every micro-moment with a better mobile strategy"
+          alt="[[item.row2.img.alt]]"
           width="100%"
         ></img>
       </td>
@@ -46,7 +47,7 @@
         style="vertical-align:top;text-align:left;font-family:Roboto,Helvetica,sans-serif,Arial;font-size:14px;color:#616161;font-weight:normal;line-height:21px;margin:0px!important;padding:0px;background-color:#ffffff"
         width="100%" align="left" valign="top"
       >
-        <p>It stands for Remarketing List on Search Ads: showing ads to people who have previously visited your site when they search for your targeted keywords on Google.</p>
+        <p>[[item.row3.text]]</p>
       </td>
     </tr>
 
@@ -58,7 +59,16 @@
     Polymer({
       is: 'x-each',
       properties: {
-        item: Object
+        item: Object,
+        tableStyle: {
+          type: String,
+          computed: 'computedTableStyle(item.row1.table_background)'
+        }
+
+      },
+      computedTableStyle: function(background) {
+        a = "width:100%!important;background:" + background + ";color:#f7fcff;font-family:Roboto,Helvetica,sans-serif,Arial;font-size:20px";
+        return a;
       }
     })
   </script>

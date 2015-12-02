@@ -10,10 +10,11 @@
 
     <iron-ajax url="/data.json" last-response="{{data}}" auto></iron-ajax>
 
-    <template is="dom-repeat" items="{{data}}">
-      <x-each item="[[item]]">
-      </x-each>
-    </template>
+    <table width="60%">
+      <template is="dom-repeat" items="{{data}}">
+        <x-each item="[[item]]"></x-each>
+      </template>
+    </table>
   </template>
 
   <script>
