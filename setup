@@ -1,0 +1,35 @@
+#!/bin/sh
+
+# Install nvm
+if ! [ -x "$(command -v nvm)" ]; then
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
+fi
+
+# Install iojs nodejs
+if ! [ -x "$(command -v node)" ]; then
+  nvm install iojs
+  nvm alias default iojs
+fi
+
+# Install npm
+if ! [ -x "$(command -v npm)" ]; then
+  curl -L https://www.npmjs.com/install.sh | sh
+fi
+
+# Install bower
+if ! [ -x "$(command -v bower)" ]; then
+  npm install -g bower
+  npm install
+fi
+
+# Install package
+bower install
+
+# Run server
+./start_server
+
+#EUUU
+echo "\033[31m Successfully install this sh**t to your PC."
+echo "\033[31m Now run \033[32m./start_server\033[33m or \033[32m node app.js\033[0m"
+echo "\033[31m and open http://localhost:3000 in your browser"
+echo "\033[31m Have Fun \033[0m"
